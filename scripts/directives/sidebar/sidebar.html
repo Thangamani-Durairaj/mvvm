@@ -1,0 +1,85 @@
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse" style="overflow:auto;height:520px;max-height:520px;">
+        <ul class="nav in" id="side-menu">
+            <sidebar-search></sidebar-search>
+            <li ui-sref-active="active">
+                <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="dashboard.controlpanel"><i class="fa fa-table fa-fw"></i>Control Panel</a>
+            </li>
+
+            <li ng-class="{active: collapseVar==1}">{{dropDown}}
+                <a href="" ng-click="check(1)"><i class="fa fa-wrench fa-fw"></i>Student<span
+                        class="fa arrow"></span></a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=1">
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.student-reg">Register</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.student-grid">Explorer</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li ng-class="{active: collapseVar==2}">{{dropDown}}
+                <a href="" ng-click="check(2)">
+                    <i class="fa fa-wrench fa-fw"></i>Staff<span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=2">
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.staff-reg">Register</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.staff-grid">Explorer</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li ng-class="{active: collapseVar==3}">
+                {{dropDown}}
+                <a href="" ng-click="check(3)">
+                    <i class="fa fa-wrench fa-fw"></i>Attendance<span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=3">
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.att-stud">Student</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.att-staff">Staff</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li ng-class="{active: collapseVar==4}">
+                {{dropDown}}
+                <a href="" ng-click="check(4)">
+                    <i class="fa fa-wrench fa-fw"></i>Vehicle<span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=4">
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.vehic-reg">Register</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.vechicle-grid">Explorer</a>
+                    </li>
+                </ul>
+            </li>
+            
+            <li ui-sref-active="active">
+                <a ui-sref="dashboard.reports"><i class="fa fa-edit fa-fw"></i>Reports</a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="login"><i class="fa fa-edit fa-fw"></i>Exit</a>
+            </li>
+           
+        </ul>
+       
+    </div>
+    <div align="center" style="padding-top:20px;height:100px;">
+        <img src="../../../images/prod.png" alt="ezSchool" class="img-rounded" style="width:30%">
+    </div>
+</div> 
+
+
+

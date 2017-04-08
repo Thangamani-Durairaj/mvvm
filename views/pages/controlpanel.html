@@ -1,0 +1,55 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Control Panel</h1>
+            <div ng-cloak>
+                <md-content>
+                    <md-tabs md-dynamic-height md-border-bottom>
+                        <md-tab label="Preferences" class="tab">
+                            <md-content class="md-padding">
+                                
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="Masters" class="tab">
+                            <md-content class="md-padding">
+                                <div ng-controller="masterCon" layout-gt-sm="row" ng-cloak>
+                                    <md-input-container class="md-block" flex-gt-sm="">
+                                        <label>Types</label>
+                                        <md-select placeholder="Select" ng-model="master" md-on-open="loadMasters()" style="min-width: 200px;">
+                                            <md-option ng-value="master" ng-repeat="master in masters">{{master.title}}</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                    <md-input-container class="md-block" flex-gt-sm="">
+                                        <md-button class="md-primary md-raised" ng-click="Refresh()">Refresh</md-button>
+                                    </md-input-container>
+                                    <md-input-container class="md-block" flex-gt-sm="">
+                                        <md-button class="md-primary md-raised" ng-click="AddNewMaster($event)">Add New</md-button>
+                                    </md-input-container>
+                                </div>
+                                    <div ui-grid="gridMasters" ui-grid-pagination ui-grid-selection ui-grid-exporter ui-grid-resize-columns ui-grid-move-columns ui-grid-pinning ui-grid-grouping>
+                                    </div>
+                         </md-content>
+                        </md-tab>
+                        <md-tab label="Users" class="tab">
+                            <md-content class="md-padding">
+                               
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="Workflow" class="tab">
+                            <md-content class="md-padding">
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="Mapper" class="tab">
+                            <md-content class="md-padding">
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="Others" class="tab">
+                            <md-content class="md-padding">
+                            </md-content>
+                        </md-tab>
+                    </md-tabs>
+                </md-content>
+            </div>
+		</div>
+	</div>
+</div>

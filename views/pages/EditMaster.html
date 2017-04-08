@@ -1,0 +1,50 @@
+﻿<md-dialog aria-label="Edit Master">
+    <form ng-cloak ng-controller="masterCon">
+        <md-toolbar class="md-primary">
+            <div class="md-toolbar-tools">
+                <h1 class="md-flex">Master (Edit)</h1>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="images/close_24.svg" aria-label="Close"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <md-content layout-padding="">
+                    <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label>Types</label>
+                        <md-select placeholder="Select" ng-model="mas_type.title" style="min-width: 200px;">
+                            <md-option ng-value="master" ng-repeat="master in masters">{{master.title}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row" >
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>Title</label>
+                            <input ng-model="mas_title">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>Description</label>
+                            <input ng-model="mas_desc">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <md-checkbox ng-model="mas_isactive">Active
+                            </md-checkbox>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>Remarks</label>
+                            <input ng-model="mas_remarks">
+                        </md-input-container>
+                    </div>
+            </md-content>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button class="md-primary" ng-click="addnew()">Update</md-button>
+            <md-button class="md-primary" ng-click="cancel()">Cancel</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

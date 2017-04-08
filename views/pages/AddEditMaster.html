@@ -1,0 +1,57 @@
+﻿<md-dialog aria-label="AddNew Master" style="width:600px;" >
+    <form name="frmAddNew" ng-cloak ng-controller="masterCon">
+        <md-toolbar class="md-primary">
+            <div class="md-toolbar-tools">
+                <h1 class="md-flex">Add New Master Type or Entry</h1>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="images/close_24.svg" aria-label="Close"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <md-content layout-padding="">
+                    <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label>Types</label>
+                        <md-select placeholder="Select" ng-model="master" md-on-open="loadMasters()" ng-required="false" style="min-width: 200px;">
+                            <md-option ng-value="master" ng-repeat="master in masters">{{master.title}}</md-option>
+                        </md-select>
+                        <div class="hint" style="color:grey;font-size:10px" ng-if="!showHints">Select the type to add new entry</div>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <md-checkbox ng-model="mas_type" ng-required="false">New Type</md-checkbox>
+                        <div class="hint" style="color:grey;font-size:10px" ng-if="!showHints">Tick to add new master type</div>
+                    </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>Title <span style="color:red;font-size:10px;" ng-show="frmAddNew.title.$error.required">*</span></label>
+                            <input name="title" ng-model="mas_title">
+                            <div class="hint" style="color:grey;font-size:10px;" ng-if="!showHints">Title of the Type or Entry</div>
+                            
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>Description</label>
+                            <input ng-model="mas_desc" ng-required="false">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <md-checkbox ng-model="mas_status" ng-required="false">Active</md-checkbox>
+                            <div class="hint" style="color:grey;font-size:10px" ng-if="!showHints">Tick to active automatically</div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>Remarks</label>
+                            <input ng-model="mas_remarks" ng-required="false">
+                        </md-input-container>
+                    </div>
+</md-content>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button class="md-primary" ng-click="frmAddNew.$valid && addnew()" >Submit</md-button>
+            <md-button class="md-primary" ng-click="cancel()">Cancel</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

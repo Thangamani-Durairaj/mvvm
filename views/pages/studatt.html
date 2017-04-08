@@ -1,0 +1,36 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Student Attendance</h1>
+            <div ng-cloak>
+                <md-content>
+                    <md-tabs md-dynamic-height md-border-bottom>
+                        <md-tab label="Calendar" class="tab">
+                            <md-content class="md-padding">
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="Absences" class="tab">
+                            <md-content class="md-padding">
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="Import" class="tab">
+                            <md-content class="md-padding">
+                                <div ng-controller="ImportCon">
+                                    <form><input type="file" class="file-chooser" id="files" name="files[]" /></form>
+                                    <div id="gridSaveState" ui-grid="gridOptions" ui-grid-importer ui-grid-edit ui-grid-row-edit
+                                         ui-grid-save-state ui-grid-selection ui-grid-cellNav ui-grid-resize-columns ui-grid-move-columns ui-grid-pinning ui-grid-grouping></div>
+                                    <button id="save" type="button" class="btn btn-success" ng-click="saveState()">Save</button>
+                                    <button id="restore" type="button" class="btn btn-success" ng-click="restoreState()">Restore</button>
+                                </div>
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="Register" class="tab">
+                            <md-content class="md-padding">
+                            </md-content>
+                        </md-tab>
+                    </md-tabs>
+                </md-content>
+            </div>
+		</div>
+	</div>
+</div>
