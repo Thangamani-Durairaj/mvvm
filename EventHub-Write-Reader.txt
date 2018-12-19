@@ -1,0 +1,9 @@
+Endpoint=sb://ihsuprodbyres115dednamespace.servicebus.windows.net/;SharedAccessKeyName=iothubowner;SharedAccessKey=WlRIItz0BmUSF0gMdIgoPqycSiSbiHa04OQLR5mrJCU=;
+EntityPath=iothub-ehub-azure-iot-867159-c7d682f5c0
+
+Connection String = Endpoint=sb://ihsuprodbyres115dednamespace.servicebus.windows.net/;SharedAccessKeyName=iothubowner;SharedAccessKey=WlRIItz0BmUSF0gMdIgoPqycSiSbiHa04OQLR5mrJCU=;
+EventHub Entity Path = iothub-ehub-azure-iot-867159-c7d682f5c0
+
+Storage Account Name - iotstorageblob
+Storage Container Name - iotdevicedata
+Storage Account Key - dwXeFxOA0zORJYMJ6bHPgd9vLbYATFkaD6Eub8W9SiB9uoNobrZjves84pcXtaLY7XCGZAxx0ujuD5jT/Tj9RA==
